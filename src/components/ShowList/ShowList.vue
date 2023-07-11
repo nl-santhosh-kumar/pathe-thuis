@@ -4,6 +4,7 @@
       class="container"
       v-for="(showInformation, index) in allShows"
       :key="index"
+      data-test="allShows"
     >
       <div
         class="content"
@@ -15,18 +16,16 @@
           fluid
           alt="Responsive image"
         />
-        <div class="show-title">
+        <div class="show-title" data-test="show-name">
           {{ showInformation.name }}
         </div>
-        <div class="show-subtitle">
-          {{ showInformation.language }} | {{ showInformation.runtime }} Minutes
-          |
-          {{ showInformation.genres?.join() }}
+        <div class="show-subtitle" data-test="show-information">
+          {{ showInformation.language }} | {{ showInformation.runtime?.average }} Minutes | {{ showInformation.genres?.join() }} 
         </div>
       </div>
     </div>
   </div>
-  <div v-if="allShows.length === 0">
+  <div v-if="allShows.length === 0" data-test="no-show-available">
     <NoShowAvailable></NoShowAvailable>
   </div>
 </template>
@@ -57,9 +56,16 @@ const onShowSelection = (showID: number) => {
 }
 
 .content {
-  background-color: white;
+  background-color: var(--color-background);
   padding: 10px;
   width: 200px;
+}
+
+.content:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 80px -25px (var(--vt-c-yellow));
+  border: 1px solid var(--vt-c-yellow);
+  transition: all 0.4s;
 }
 
 img {
@@ -78,7 +84,7 @@ img {
   margin-top: 10px;
   font-weight: bold;
   font-size: 14px;
-  background: #ffc426;
+  background: var(--vt-c-yellow);
   padding-left: 10px;
 }
 

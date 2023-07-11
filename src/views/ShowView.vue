@@ -8,7 +8,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import {
   getShowInformation,
@@ -52,10 +52,14 @@ const LoadEpisodeDetailsByShowID = async (showID: number | string) => {
   episodeInformation.value = allEpisode;
 };
 
-if (showIDFromRouteInformation) {
+
+
+onMounted(() => {
+ if (showIDFromRouteInformation) {
   LoadShowInformationFromExternalAPI(showIDFromRouteInformation.id.toString());
   LoadEpisodeDetailsByShowID(showIDFromRouteInformation.id.toString());
 }
+});
 </script>
 <style scoped lang="scss">
 .wrapper {

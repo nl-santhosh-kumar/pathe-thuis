@@ -4,11 +4,11 @@
     <div class="container" v-for="(episode, index) in episodeList" :key="index">
       <div>
         <img :src="`${episode.image?.original}`" fluid alt="Responsive image" />
-        <div class="show-title">
+        <div class="show-title" data-test="name">
           {{ episode.name }}
         </div>
-        <div class="show-subtitle">
-          Season{{ episode.season }} | {{ episode.runtime }} Minutes
+        <div class="show-subtitle" data-test="subtitle">
+          Season {{ episode.season }} | {{ episode.runtime?.average }} Minutes
         </div>
       </div>
     </div>
@@ -45,7 +45,7 @@ img {
 
 .show-subtitle {
   font-size: 11px;
-  background: #ffc426;
+  background: var(--vt-c-yellow);
 }
 
 @media screen and (max-width: 768px) {

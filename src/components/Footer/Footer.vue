@@ -11,7 +11,7 @@
 
 .fill {
   width: 100%;
-  background: #ffc426;
+  background: var(--vt-c-yellow);
   position: fixed;
   bottom: 0;
 }

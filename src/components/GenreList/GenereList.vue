@@ -17,7 +17,7 @@ const props = defineProps<{ genereList: string[] }>();
 .chip {
   display: inline-flex;
   flex-direction: row;
-  background-color: #ffc426;
+  background-color: var(--vt-c-yellow);
   cursor: default;
   height: 36px;
   outline: none;

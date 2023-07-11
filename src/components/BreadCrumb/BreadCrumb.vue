@@ -26,17 +26,17 @@ ul.breadcrumb li {
 
 ul.breadcrumb li + li:before {
   padding: 8px;
-  color: black;
+  color: var( --vt-c-black);
   content: "/\00a0";
 }
 
 ul.breadcrumb li a {
-  color: #ffc426;
+  color: var(--vt-c-yellow);
   text-decoration: none;
 }
 
 ul.breadcrumb li a:hover {
-  color: #ffc426;
+  color: var(--vt-c-yellow);
   text-decoration: underline;
   cursor: pointer;
 }

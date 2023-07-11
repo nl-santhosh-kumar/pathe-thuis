@@ -1,25 +1,21 @@
 # pathe-thuis
 
-This template should help get you started developing with Vue 3 in Vite.
+A Vuejs Project to consume api from TVMAZE (http://www.tvmaze.com/api), show the list of shows available. Allow the user to search for their favorite show. User can also find additional information about the show such as Genre, Language, Runtime and Summary. Episode information about the show along with Season and duration of each episode.
 
-## Recommended IDE Setup
+# Application URL ( Deployed Application)
+https://pathe-thuis-vue.netlify.app/
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Type Support for `.vue` Imports in TS
+## Application Design
+The Application has two views, Home page and Show View. 
+In Home Page View , user can see the list of all available shows from the external api. User can scroll through the list of all shows. Or with the help of search bar, user can search for their favorite show. The search bar supports Auto Complete Option, which allows the user to do search quicker and efficient.
+The Home page view provides information about the show such as Name , Language, Duration and Genere.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+![alt text](./screenshot/Home.png)
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+When user has found a show which they would like to know more, then by simply clicking on the show thumbnail.This will take the user to the Show Information page, where user can find information about the show in detail. Information such as Summary of the show, And Episodes available are presented to the user.
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+![alt text](./screenshot/ShowInformation.png)
 
 ## Project Setup
 
@@ -44,9 +40,18 @@ npm run build
 ```sh
 npm run test:unit
 ```
+### RunUnit Test Coverage.
+```sh
+npm run coverage
+```
+
+![alt text](./screenshot/Coverage.png)
 
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
 npm run lint
 ```
+
+
+

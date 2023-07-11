@@ -55,7 +55,7 @@ img {
   transition: all 0.4s;
 }
 
-.show_card .info_section {
+.info_section {
   position: relative;
   width: 100%;
   height: 100%;
@@ -64,29 +64,23 @@ img {
   border-radius: 10px;
 }
 
-.show_card .info_section .movie_header {
+.info_section {
   position: relative;
   padding: 25px;
   height: 40%;
 }
 
-.show_card .info_section .movie_header h1 {
-  color: black;
+h1 {
+  color: var( --vt-c-black);
   font-weight: 400;
 }
 
-.show_card .info_section .movie_header h4 {
+h4 {
   color: #555;
   font-weight: 400;
 }
 
-.show_card .info_section .movie_header .type {
-  display: inline-block;
-  color: #959595;
-  margin-left: 10px;
-}
-
-.show_card .info_section .movie_header .locandina {
+.locandina {
   position: relative;
   float: left;
   margin-right: 20px;
@@ -94,7 +88,7 @@ img {
   box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 }
 
-.show_card .info_section .movie_desc {
+.movie_desc {
   padding: 25px;
   height: 50%;
 }
@@ -103,36 +97,13 @@ img {
   color: #545454;
 }
 
-.show_card .info_section .movie_social {
+.movie_social {
   height: 10%;
   padding-left: 15px;
   padding-bottom: 20px;
 }
 
-.show_card .info_section .movie_social ul {
-  list-style: none;
-  padding: 0;
-}
-
-.show_card .info_section .movie_social ul li {
-  display: inline-block;
-  color: rgba(0, 0, 0, 0.3);
-  transition: color 0.3s;
-  transition-delay: 0.15s;
-  margin: 0 10px;
-}
-
-.show_card .info_section .movie_social ul li:hover {
-  transition: color 0.3s;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.show_card .info_section .movie_social ul li i {
-  font-size: 19px;
-  cursor: pointer;
-}
-
-.show_card .blur_back {
+.blur_back {
   position: absolute;
   top: 0;
   z-index: 1;

@@ -13,7 +13,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { computed, ref } from "vue";
+import { computed, ref, onMounted } from "vue";
 import { type T_Show } from "../types/show.types";
 import ShowList from "../components/ShowList/ShowList.vue";
 import SearchBar from "../components/SearchBar/SearchBar.vue";
@@ -29,7 +29,10 @@ const LoadAllShowsFromExternalAPI = async () => {
   allShows.value = data || [];
   reserveAllShows.value = data || [];
 };
-LoadAllShowsFromExternalAPI();
+
+onMounted(() => {
+  LoadAllShowsFromExternalAPI();
+});
 
 /** */
 const loadAllGenere = computed(() => {
